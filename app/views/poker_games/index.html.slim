@@ -2,11 +2,15 @@ p Poker Games:
 ul
   - @poker_games.each do |poker_game|
     li
-      = "Date: #{poker_game.date.to_s}"
+      = link_to "Game no##{poker_game.id}", edit_poker_game_path(poker_game)
+      div= "Date: #{poker_game.date.to_s}"
       - if poker_game.users.count > 0
         div Players:
         ul
           - poker_game.users.each do |user|
             li
               = link_to user.email, user_path(user)
-              span = " profit: #{ user.poker_enrolls.where(poker_game_id: poker_game.id).first.profit }"
+              /This could be better? a lot of queries here
+              - if profit = user.poker_enrolls.where(poker_game_id: poker_game.id).first.profit
+                span= " profit: #{profit}"
+p= link_to "Add a Poker Game", new_poker_game_path

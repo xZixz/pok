@@ -3,7 +3,10 @@
   = f.label "Players:"
   = f.select :user_ids, User.all.map {|user| [user.name, user.id]}, { include_hidden: false }, class: "user_select", multiple: true
   br
-  = f.button :submit, "Create"
+  - if @poker_game.persisted?
+    = f.button :submit, "Update"
+  - else
+    = f.button :submit, "Create"
 
 javascript:
   $(function(){
