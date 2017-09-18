@@ -1,3 +1,16 @@
 = simple_form_for @poker_game do |f|
   = f.input :date
-  = f.button :submit
+  = f.label "Players:"
+  = f.select :user_ids, User.all.map {|user| [user.name, user.id]}, { include_hidden: false }, class: "user_select", multiple: true
+  br
+  = f.button :submit, "Create"
+
+javascript:
+  $(function(){
+    $(".user_select").selectize({
+      valueField: 'email',
+      labelField: 'name',
+      create: false,
+      searchField: ['email', 'name'],
+    })
+  });

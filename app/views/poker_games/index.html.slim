@@ -2,9 +2,9 @@ p Poker Games:
 ul
   - @poker_games.each do |poker_game|
     li
-      ="Date: #{poker_game.date.to_s}"
+      = "Date: #{poker_game.date.to_s}"
       - if poker_game.users.count > 0
-        p Players:
+        div Players:
         ul
           - poker_game.users.each do |user|
             li
