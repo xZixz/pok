@@ -27,18 +27,18 @@ class PokerGamesController < ApplicationController
     if @poker_game.update_attributes(update_params)
       redirect_to  poker_games_url
     else
-      flash[:alert] = "Failed updating"
+      flash[:alert] = "Failed updating with errors: " + @poker_game.errors.full_messages.join(', ').to_s
       render "edit"
     end
   end
 
   private
   def update_params
-    params[:poker_game].permit(:date, user_ids: [])
+    params[:poker_game].permit(:date, poker_enrolls_attributes: {})
   end
 
   def create_params
-    params[:poker_game].permit(:date, user_ids: [])
+    params[:poker_game].permit(:date, poker_enrolls_attributes: {})
   end
 
   def get_poker_game
