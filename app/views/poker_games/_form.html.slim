@@ -6,6 +6,7 @@
   div= f.fields_for :poker_enrolls, f.object.poker_enrolls.sort_by{|pe| pe.user.name} do |ff|
     = ff.check_box :_destroy, { checked: ff.object.persisted? }, '0', '1'
     = ff.label :_destroy, ff.object.user.name
+    = ff.input_field :profit
     = ff.hidden_field :user_id
 
   - if @poker_game.persisted?
