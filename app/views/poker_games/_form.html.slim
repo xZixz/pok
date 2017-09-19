@@ -1,25 +1,14 @@
 = simple_form_for setup_poker_game(@poker_game) do |f|
   = f.input :date
   = f.label "Players:"
-  = f.select :user_ids, User.all.map { |user| [user.name, user.id] }, { include_hidden: false }, class: "user_select", multiple: true
-  br
-  div= f.fields_for :poker_enrolls, f.object.poker_enrolls.sort_by{|pe| pe.user.name} do |ff|
-    = ff.check_box :_destroy, { checked: ff.object.persisted? }, '0', '1'
-    = ff.label :_destroy, ff.object.user.name
-    = ff.input_field :profit
-    = ff.hidden_field :user_id
+  div = f.fields_for :poker_enrolls, f.object.poker_enrolls.sort_by{|pe| pe.user.name} do |ff|
+    p
+      = ff.check_box :_destroy, { checked: ff.object.persisted? }, '0', '1'
+      = ff.label :_destroy, ff.object.user.name
+      = ff.input_field :profit
+      = ff.hidden_field :user_id
 
   - if @poker_game.persisted?
     = f.button :submit, "Update"
   - else
     = f.button :submit, "Create"
-
-javascript:
-  $(function(){
-    $(".user_select").selectize({
-      valueField: 'email',
-      labelField: 'name',
-      create: false,
-      searchField: ['email', 'name'],
-    })
-  });
