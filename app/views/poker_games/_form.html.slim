@@ -1,14 +1,18 @@
-= simple_form_for setup_poker_game(@poker_game) do |f|
-  = f.input :date
-  = f.label "Players:"
-  div = f.fields_for :poker_enrolls, f.object.poker_enrolls.sort_by{|pe| pe.user.name} do |ff|
-    p
-      = ff.check_box :_destroy, { checked: ff.object.persisted? }, '0', '1'
-      = ff.label :_destroy, ff.object.user.name
-      = ff.input_field :profit
-      = ff.hidden_field :user_id
+.container
+  = simple_form_for setup_poker_game(@poker_game) do |f|
+    .row
+      = f.input :date
+    .row
+      = f.label "Players:"
+    = f.fields_for :poker_enrolls, f.object.poker_enrolls.sort_by{|pe| pe.user.name} do |ff|
+      .row
+        .col-4
+          = ff.check_box :_destroy, { checked: ff.object.persisted? }, '0', '1'
+          = ff.label :_destroy, ff.object.user.name
+        .col = ff.input_field :profit
+        = ff.hidden_field :user_id
 
-  - if @poker_game.persisted?
-    = f.button :submit, "Update"
-  - else
-    = f.button :submit, "Create"
+    - if @poker_game.persisted?
+      = f.button :submit, "Update"
+    - else
+      = f.button :submit, "Create"

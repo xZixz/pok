@@ -1,0 +1,66 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Achievement	lib/achievement/achievement.rb	/^  class Achievement$/;"	c	class:Achievement
+Achievement	lib/achievement/achievement.rb	/^module Achievement$/;"	m
+Achievement	lib/achievement/manager.rb	/^module Achievement$/;"	m
+Achievement	lib/achievement/top_score_achievement.rb	/^module Achievement$/;"	m
+Achievement	lib/achievement/worst_score_achievement.rb	/^module Achievement$/;"	m
+AchievementTest	test/models/achievement_test.rb	/^class AchievementTest < ActiveSupport::TestCase$/;"	c
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddNameToUser	db/migrate/20170914041950_add_name_to_user.rb	/^class AddNameToUser < ActiveRecord::Migration[5.1]$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Pok
+ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
+ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+ApplicationJob	app/jobs/application_job.rb	/^class ApplicationJob < ActiveJob::Base$/;"	c
+ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
+ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < ActiveRecord::Base$/;"	c
+ApplicationSystemTestCase	test/application_system_test_case.rb	/^class ApplicationSystemTestCase < ActionDispatch::SystemTestCase$/;"	c
+Channel	app/channels/application_cable/channel.rb	/^  class Channel < ActionCable::Channel::Base$/;"	c	class:ApplicationCable
+Connection	app/channels/application_cable/connection.rb	/^  class Connection < ActionCable::Connection::Base$/;"	c	class:ApplicationCable
+CreatePokerEnrolls	db/migrate/20170912040944_create_poker_enrolls.rb	/^class CreatePokerEnrolls < ActiveRecord::Migration[5.1]$/;"	c
+CreatePokerGames	db/migrate/20170912040813_create_poker_games.rb	/^class CreatePokerGames < ActiveRecord::Migration[5.1]$/;"	c
+DeviseCreateUsers	db/migrate/20170907043533_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration[5.1]$/;"	c
+Manager	lib/achievement/manager.rb	/^  class Manager$/;"	c	class:Achievement
+Pok	config/application.rb	/^module Pok$/;"	m
+PokerEnroll	app/models/poker_enroll.rb	/^class PokerEnroll < ApplicationRecord$/;"	c
+PokerEnrollTest	test/models/poker_enroll_test.rb	/^class PokerEnrollTest < ActiveSupport::TestCase$/;"	c
+PokerGame	app/models/poker_game.rb	/^class PokerGame < ApplicationRecord$/;"	c
+PokerGameControllerTest	test/controllers/poker_game_controller_test.rb	/^class PokerGameControllerTest < ActionDispatch::IntegrationTest$/;"	c
+PokerGameHelper	app/helpers/poker_game_helper.rb	/^module PokerGameHelper$/;"	m
+PokerGameTest	test/models/poker_game_test.rb	/^class PokerGameTest < ActiveSupport::TestCase$/;"	c
+PokerGames	app/helpers/poker_games/form_helper.rb	/^module PokerGames::FormHelper$/;"	m
+PokerGamesController	app/controllers/poker_games_controller.rb	/^class PokerGamesController < ApplicationController$/;"	c
+PokerGamesControllerTest	test/controllers/poker_games_controller_test.rb	/^class PokerGamesControllerTest < ActionDispatch::IntegrationTest$/;"	c
+PokerGamesHelper	app/helpers/poker_games_helper.rb	/^module PokerGamesHelper$/;"	m
+TopScoreAchievement	lib/achievement/top_score_achievement.rb	/^  class TopScoreAchievement > Achievement$/;"	c	class:Achievement
+User	app/models/user.rb	/^class User < ApplicationRecord$/;"	c
+UserTest	test/models/user_test.rb	/^class UserTest < ActiveSupport::TestCase$/;"	c
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+WorstScoreAchievement	lib/achievement/worst_score_achievement.rb	/^  class WorstScoreAchievement > Achievement$/;"	c	class:Achievement
+achievements_of_user	lib/achievement/manager.rb	/^    def achievements_of_user(user)$/;"	f	class:Achievement.Manager
+achievers	lib/achievement/achievement.rb	/^    def achievers$/;"	f	class:Achievement.Achievement
+achievers	lib/achievement/top_score_achievement.rb	/^    def achievers$/;"	f	class:Achievement.TopScoreAchievement
+change	db/migrate/20170907043533_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
+change	db/migrate/20170912040813_create_poker_games.rb	/^  def change$/;"	f	class:CreatePokerGames
+change	db/migrate/20170912040944_create_poker_enrolls.rb	/^  def change$/;"	f	class:CreatePokerEnrolls
+change	db/migrate/20170914041950_add_name_to_user.rb	/^  def change$/;"	f	class:AddNameToUser
+create	app/controllers/poker_games_controller.rb	/^  def create$/;"	f	class:PokerGamesController
+create_params	app/controllers/poker_games_controller.rb	/^  def create_params$/;"	f	class:PokerGamesController
+edit	app/controllers/poker_games_controller.rb	/^  def edit$/;"	f	class:PokerGamesController
+games_num	app/models/user.rb	/^  def games_num$/;"	f	class:User
+get_poker_game	app/controllers/poker_games_controller.rb	/^  def get_poker_game$/;"	f	class:PokerGamesController
+index	app/controllers/poker_games_controller.rb	/^  def index$/;"	f	class:PokerGamesController
+new	app/controllers/poker_games_controller.rb	/^  def new$/;"	f	class:PokerGamesController
+setup_poker_game	app/helpers/poker_games/form_helper.rb	/^  def setup_poker_game(poker_game)$/;"	f	class:PokerGames
+show	app/controllers/users_controller.rb	/^  def show$/;"	f	class:UsersController
+system!	bin/setup	/^def system!(*args)$/;"	f
+system!	bin/update	/^def system!(*args)$/;"	f
+total_income	app/models/user.rb	/^  def total_income$/;"	f	class:User
+update	app/controllers/poker_games_controller.rb	/^  def update$/;"	f	class:PokerGamesController
+update_params	app/controllers/poker_games_controller.rb	/^  def update_params$/;"	f	class:PokerGamesController
