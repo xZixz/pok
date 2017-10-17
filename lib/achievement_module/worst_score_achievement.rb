@@ -1,5 +1,9 @@
-module Achievement
-  class WorstScoreAchievement < Achievement::Achievement
+module AchievementModule
+  class WorstScoreAchievement
+    def update_achievers
+      
+    end
+
     def achievers
       if max_arr = PokerEnroll.group(:user_id).order('sum_profit asc').sum(:profit).first
       else

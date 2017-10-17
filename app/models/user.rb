@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :poker_enrolls
   has_many :poker_games, through: :poker_enrolls
+  has_and_belongs_to_many :achievements
   
   def total_income
     PokerEnroll.where(user_id: self.id).sum(:profit)
