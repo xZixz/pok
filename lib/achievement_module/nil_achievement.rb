@@ -1,11 +1,8 @@
 module AchievementModule
-  class NilAchievement
-    def update_achievers
-      
-    end
+  class NilAchievement < AchievementModule::BaseAchievement
 
-    def achievers
-      []
+    def name
+      "nil"
     end
   end
 end

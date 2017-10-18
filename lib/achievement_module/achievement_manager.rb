@@ -4,8 +4,10 @@ module AchievementModule
 
     attr_accessor :achievements
 
-    ACHIEVEMENT_TYPES = [TOP_SCORE = "top_score",
-                         WORST_SCORE = "worst_score"]
+    ACHIEVEMENT_TYPES = [ TOP_SCORE = "top_score",
+                          WORST_SCORE = "worst_score",
+                          BEST_SCORE_IN_A_GAME = "best_score_in_a_game",
+                          NIL = "nil" ]
 
     def initialize
       self.achievements = []
@@ -16,11 +18,13 @@ module AchievementModule
 
     def achievement_from_type(type)
       if type == TOP_SCORE
-        Achievement::TopScoreAchievement.new
+        AchievementModule::TopScoreAchievement.new
       elsif type == WORST_SCORE
-        Achievement::WorstScoreAchievement.new
+        AchievementModule::WorstScoreAchievement.new
+      elsif type == BEST_SCORE_IN_A_GAME
+        AchievementModule::BestScoreInAGameAchievement.new
       else
-        NilAchievement.new
+        AchievementModule::NilAchievement.new
       end
     end
 
